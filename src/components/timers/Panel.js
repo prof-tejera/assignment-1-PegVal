@@ -12,13 +12,6 @@ import XY from "./XY";
 
 
 
-/* function Test() {
-  return (
-     <div></div>duration={0} init={duration} rehearsal={repeat}
-
-  );
-} */
-
 function Panel() {
   const [duration, setDuration] = useState("");
   const [repeat, setNumRepeat] = useState("");
@@ -69,7 +62,7 @@ function Panel() {
           </div>
         </>
       )}
-      {/* ___________________________________________________Changer les conditions de validation des inputs fields */}
+     
 
       {validate && (
         <>
@@ -104,7 +97,7 @@ function TimerDurationInput({ children, duration, onSetDuration }) {
 
 
 
-// ### --------------Affichage du résultat des inputs -------------------------------- AUTRE écran ?????????
+// ### --------------Affichage du résultat des inputs -------
 function DisplayTime({ duration, repeat, pause, total }) {
   return (
     <div className="displayResult">
@@ -143,14 +136,14 @@ function DisplayTime({ duration, repeat, pause, total }) {
       </div>
 
       <div className="resultContentLink">
-        {/* <h4 className="selectTimer">Selects one of the timers</h4>
+        {/* TO DO: components with their own input fields
+        <h4 className="selectTimer">Selects one of the timers</h4>
         <div className="resultBoxLink">
           <div className="resultNumLink">TABATA</div>
         </div>
 
         <div className="resultBoxLink">
           <div className="resultNumLink">
-           
             <Link to="/xy">xxx</Link>
           </div>
         </div>
@@ -161,7 +154,8 @@ function DisplayTime({ duration, repeat, pause, total }) {
 
         <div className="resultBoxLink">
           <div className="resultNumLink">STOPWATCH</div>
-        </div> */}
+        </div> 
+        */}
       </div>
 
       <div>
