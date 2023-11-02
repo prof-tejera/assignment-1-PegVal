@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import DocumentComponent from "../components/documentation/DocumentComponent";
 
-import Loading from "../components/generic/Loading";
+//import Loading from "../components/generic/Loading";
 
 const Container = styled.div`
   display: flex;
@@ -11,9 +11,9 @@ const Container = styled.div`
   width: 100%;
 `;
 
-const Title = styled.div`
+/* const Title = styled.div`
   font-size: 2rem;
-`;
+`; */
 
 /**
  * You can document your components by using the DocumentComponent component

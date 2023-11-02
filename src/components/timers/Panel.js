@@ -136,7 +136,7 @@ function DisplayTime({ duration, repeat, pause, total }) {
       </div>
 
       <div className="resultContentLink">
-        {/* TO DO: components with their own input fields
+        {/* TO DO: components with their own input fields + Link to
         <h4 className="selectTimer">Selects one of the timers</h4>
         <div className="resultBoxLink">
           <div className="resultNumLink">TABATA</div>
