@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 
+import { Link } from 'react-router-dom';
+
 
 import Stopwatch from "./Stopwatch";
 import Countdown from "./Countdown";
@@ -9,13 +11,21 @@ import Tabata from "./Tabata";
 import XY from "./XY";
 
 
+
+/* function Test() {
+  return (
+     <div></div>duration={0} init={duration} rehearsal={repeat}
+
+  );
+} */
+
 function Panel() {
   const [duration, setDuration] = useState("");
   const [repeat, setNumRepeat] = useState("");
   const [pause, setPause] = useState("");
   const total = (pause + duration) * repeat;
 
-  
+ 
   const [validate, setValidate] = useState(false);
 
   // Remettre les Inputs à zéro
@@ -133,13 +143,16 @@ function DisplayTime({ duration, repeat, pause, total }) {
       </div>
 
       <div className="resultContentLink">
-        <h4 className="selectTimer">Selects one of the timers</h4>
+        {/* <h4 className="selectTimer">Selects one of the timers</h4>
         <div className="resultBoxLink">
           <div className="resultNumLink">TABATA</div>
         </div>
 
         <div className="resultBoxLink">
-          <div className="resultNumLink">XY</div>
+          <div className="resultNumLink">
+           
+            <Link to="/xy">xxx</Link>
+          </div>
         </div>
 
         <div className="resultBoxLink">
@@ -148,9 +161,8 @@ function DisplayTime({ duration, repeat, pause, total }) {
 
         <div className="resultBoxLink">
           <div className="resultNumLink">STOPWATCH</div>
-        </div>
+        </div> */}
       </div>
-
 
       <div>
         <Tabata

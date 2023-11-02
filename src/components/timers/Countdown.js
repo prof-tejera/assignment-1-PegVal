@@ -45,7 +45,7 @@ const Countdown = ({ duration, init }) => {
 
   return (
     <div className="counter-content" id="#countdown">
-      <h2>test CountDown</h2>
+      <h2>CountDown</h2>
       <h4>
         You have requested a counter from ({valInitial} to {valFinal})
       </h4>

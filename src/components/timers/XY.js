@@ -1,8 +1,12 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+
 
 //const XY = () => null;
 
 const XY = ({ duration, init, rehearsal }) => {
+
+  const navigate = useNavigate();
   // valeur à faire passer dans le component
   const valInitial = init;
   const valFinal = duration;
@@ -61,7 +65,7 @@ const XY = ({ duration, init, rehearsal }) => {
 
   return (
     <div className="counter-content" id="#xy">
-      <h2>test XY</h2>
+      <h2>XY</h2>
       <h4>
         You have requested a counter from ({valInitial} to {valFinal}) *{" "}
         {valRepeat} times
@@ -107,6 +111,15 @@ const XY = ({ duration, init, rehearsal }) => {
           Reset
         </button>
       </div>
+      {/*  to do: when using route: no input form at the beginning but only in component
+      <button
+        className="button"
+        onClick={() => {
+          navigate(-1);
+        }}
+      >
+        Back
+      </button> */}
     </div>
   );
 };

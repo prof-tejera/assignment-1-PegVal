@@ -45,7 +45,7 @@ const Stopwatch = ({ duration, init }) => {
 
   return (
     <div className="counter-content" id="#stopwatch">
-      <h2>TEst : StopWatch</h2>
+      <h2>StopWatch</h2>
       <h4>
         You have requested a counter from ({valInitial} to {valFinal})
       </h4>

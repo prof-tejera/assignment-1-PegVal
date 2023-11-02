@@ -105,7 +105,7 @@ const Tabata = ({ duration, init, rehearsal, pause, remaining }) => {
 
   return (
     <div className="counter-content" id="#tabata">
-      <h2>test TABATA</h2>
+      <h2>TABATA</h2>
       <h4>
         You have requested a counter from ({valInitial} to {valFinal}) with a
         pause of {valPause} seconds, {valRepeat} times
