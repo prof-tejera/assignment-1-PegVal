@@ -423,3 +423,14 @@ input[type=text]:focus {
 .button:hover {
       background-color: #3f4773;
 }
+
+
+.docs{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.docsContent{
+  max-width: 700px;
+}
