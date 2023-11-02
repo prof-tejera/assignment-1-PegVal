@@ -1,64 +1,36 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import styled from "styled-components";
-
-import DocumentationView from "./views/DocumentationView";
-import TimersView from "./views/TimersView";
-
-// ---------------------- peggy import ----------------------
-import "./counter.css";
-
 //import { useState, useEffect } from "react";
 
-/* import Stopwatch from "./components/timers/Stopwatch";
-import Countdown from "./components/timers/Countdown";
-import Tabata from "./components/timers/Tabata";
-import XY from "./components/timers/XY"; */
+import { useState } from "react";
 
 
-
-import Panel from "./components/timers/Panel";
-// ---------------------- end import ----------------------
-
-
-
+import Stopwatch from "./Stopwatch";
+import Countdown from "./Countdown";
+import Tabata from "./Tabata";
+import XY from "./XY";
 
 
-const Container = styled.div`
-  background: #f0f6fb;
-  height: 100vh;
-  overflow: auto;
-`;
-
-const Nav = () => {
-  return (
-    <nav>
-      <ul>
-        <li>
-          <Link to="/">Timers</Link>
-        </li>
-        <li>
-          <Link to="/docs">Documentation</Link>
-        </li>
-      </ul>
-    </nav>
-  );
-};
-
-
-/** ----------------------------------------------------------- **/
-
-/* function Panel() {
+function Panel() {
   const [duration, setDuration] = useState("");
   const [repeat, setNumRepeat] = useState("");
   const [pause, setPause] = useState("");
   const total = (pause + duration) * repeat;
 
+  
+  const [validate, setValidate] = useState(false);
+
+  // Remettre les Inputs à zéro
   function handleReset() {
     setDuration("");
     setNumRepeat("");
     setPause("");
+    setValidate(false);
   }
+
+  // btn valider les inputs
+  function validateInputs() {
+    setValidate(true);
+  }
+
 
   return (
     <div className="panel">
@@ -79,11 +51,19 @@ const Nav = () => {
         </TimerDurationInput>
       </div>
 
-      {pause > 0 && (
+      {pause !== "" && repeat !== "" && duration !== "" && (
         <>
-          <div className="inputPanel">
-            <Button onReset={handleReset} />
+          <div className="inputPanelValidate">
+            <button className="btnResetView" onClick={validateInputs}>Valider</button>
+            <button className="btnResetView" onClick={handleReset}>Reset</button>
           </div>
+        </>
+      )}
+      {/* ___________________________________________________Changer les conditions de validation des inputs fields */}
+
+      {validate && (
+        <>
+          
           <DisplayTime
             duration={duration}
             repeat={repeat}
@@ -96,7 +76,8 @@ const Nav = () => {
   );
 }
 
-// ### INPUT de base pour les champs des Timer
+
+// ### Input de base pour les champs des Timer
 function TimerDurationInput({ children, duration, onSetDuration }) {
   return (
     <div>
@@ -111,7 +92,9 @@ function TimerDurationInput({ children, duration, onSetDuration }) {
   );
 }
 
-// ### Affichage du résultat des inputs
+
+
+// ### --------------Affichage du résultat des inputs -------------------------------- AUTRE écran ?????????
 function DisplayTime({ duration, repeat, pause, total }) {
   return (
     <div className="displayResult">
@@ -185,37 +168,21 @@ function DisplayTime({ duration, repeat, pause, total }) {
   );
 }
 
+
+
 // ### btn pour tout recommencer
-function Button({ onReset }) {
+/* function Button({ onReset }) {
   return (
     <div className="resetView">
-      <button className="btnResetView" onClick={onReset}>
+      <button
+        className="btnResetView"
+        onClick={onReset}>
         Reset view
       </button>
     </div>
   );
 } */
 
-/** ----------------------------------------------------------- **/
 
 
-
-
-const App = () => {
-  return (
-    <Container>
-      <Router>
-        <Nav />
-        <Panel />
-        <Routes>
-          <Route path="/docs" element={<DocumentationView />} />
-          {/*  charge par defaut, tout les composants
-          <Route path="/" element={<TimersView />} /> 
-        */}
-        </Routes>
-      </Router>
-    </Container>
-  );
-};
-
-export default App;
+export default Panel;

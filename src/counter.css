@@ -108,16 +108,17 @@ input[type=text]:focus {
 }
 
 .btnResetView {
-      text-align: center;
-      height: 70px;
-      width: 560px;
-      border: solid 4px rgba(255, 255, 255, 0.2);
-      text-transform: uppercase;
-      font-weight: 600;
-      font-size: .8rem;
-      background-color: #6876c1;
-      color: #fff;
-      letter-spacing: .2rem;
+  text-align: center;
+  height: 60px;
+  width: 200px;
+  border: solid 4px rgba(255, 255, 255, 0.2);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: .8rem;
+  background-color: #6876c1;
+  color: #fff;
+  letter-spacing: .2rem;
+  margin: 30px;
 }
 
 .btnResetView:hover {
@@ -127,6 +128,14 @@ input[type=text]:focus {
 .inputPanel {
       margin: auto;
       width: 560px;
+}
+
+.inputPanelValidate {
+ /*  margin: auto; */
+  /* width: 560px; */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .textForm {
