@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+//import { useNavigate } from "react-router-dom";
 
 
 //const XY = () => null;
 
 const XY = ({ duration, init, rehearsal }) => {
 
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
   // valeur à faire passer dans le component
   const valInitial = init;
   const valFinal = duration;
