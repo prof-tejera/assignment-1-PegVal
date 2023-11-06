@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/assignment-1-PegVal/static/css/main.9e6b1566.css",
+    "main.js": "/assignment-1-PegVal/static/js/main.83e16000.js",
+    "index.html": "/assignment-1-PegVal/index.html",
+    "main.9e6b1566.css.map": "/assignment-1-PegVal/static/css/main.9e6b1566.css.map",
+    "main.83e16000.js.map": "/assignment-1-PegVal/static/js/main.83e16000.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9e6b1566.css",
+    "static/js/main.83e16000.js"
+  ]
+}
