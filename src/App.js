@@ -3,7 +3,26 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import styled from "styled-components";
 
 import DocumentationView from "./views/DocumentationView";
-import TimersView from "./views/TimersView";
+//import TimersView from "./views/TimersView";
+
+// ---------------------- peggy import ----------------------
+import "./counter.css";
+
+//import { useState, useEffect } from "react";
+
+/* import Stopwatch from "./components/timers/Stopwatch";
+import Countdown from "./components/timers/Countdown";
+import Tabata from "./components/timers/Tabata";
+import XY from "./components/timers/XY"; */
+
+
+
+import Panel from "./components/timers/Panel";
+// ---------------------- end import ----------------------
+
+
+
+
 
 const Container = styled.div`
   background: #f0f6fb;
@@ -16,14 +35,35 @@ const Nav = () => {
     <nav>
       <ul>
         <li>
-          <Link to="/">Timers</Link>
+          <Link to="/docs">Documentation</Link>
         </li>
         <li>
-          <Link to="/docs">Documentation</Link>
+          <Link to="/">Counter</Link>
         </li>
       </ul>
     </nav>
   );
+};
+
+
+
+/** ----------------------------------------------------------- **/
+
+
+const Inner = () => {
+  const commonRoutes = (
+    <>
+      <Route path="/" element={<Panel />} />
+      {/*  To do when creating new components with their own input fields
+        <Route path="/xy" element={<XY />} /> 
+    */}
+    </>
+  );
+return(
+  <Routes>
+    {commonRoutes}
+  </Routes>
+);
 };
 
 const App = () => {
@@ -31,9 +71,12 @@ const App = () => {
     <Container>
       <Router>
         <Nav />
+        <Inner />
         <Routes>
           <Route path="/docs" element={<DocumentationView />} />
-          <Route path="/" element={<TimersView />} />
+          {/*  charge par defaut, tout les composants
+          <Route path="/" element={<TimersView />} /> 
+        */}
         </Routes>
       </Router>
     </Container>
